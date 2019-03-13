@@ -1,23 +1,26 @@
 {
-    "name": "@nonameffh/ymap",
-    "version": "1.0.0",
-    "description": "Yandex map API loader and parser",
-    "main": "index.js",
-    "scripts": {
-        "build": "tsc"
-    },
-    "keywords": [
-        "Yandex map API"
-    ],
-    "homepage": "https://github.com/nonameffh/ymap",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nonameffh/ymap"
-    },
-    "author": "nonameFFh",
-    "license": "MIT",
-    "dependencies": {},
-    "devDependencies": {
-        "typescript": "^3.0.0"
-    }
+  "name": "@nonameffh/ymap",
+  "version": "1.0.0",
+  "description": "Yandex map API loader and parser",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "Yandex map API"
+  ],
+  "homepage": "https://github.com/nonameffh/ymap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonameffh/ymap.git"
+  },
+  "author": "nonameFFh",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nonameffh/ymap/issues"
+  }
 }

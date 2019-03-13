@@ -1,4 +1,3 @@
-/// <reference path="./type/ymaps.d.ts" />
 var BASE_SERVICE_URL = "api-maps.yandex.ru";
 var Type;
 (function (Type) {
@@ -18,7 +17,7 @@ var Language;
 ;
 var DefaultConfig = {
     type: Type.Free,
-    version: '2.1',
+    version: "2.1",
     language: Language.ru_RU,
     options: {}
 };
@@ -34,27 +33,36 @@ var Loader = /** @class */ (function () {
         if (config === void 0) { config = DefaultConfig; }
         // create base url
         var url = [
-            config.type === Type.Enterprise ? '//enterpise.api-maps.yandex.ru' : '//api-maps.yandex.ru',
+            config.type === Type.Enterprise ? "//enterpise.api-maps.yandex.ru" : "//api-maps.yandex.ru",
             config.version,
             "?apikey=" + key + "&lang=" + config.language
-        ].join('/');
+        ].join("/");
         // add params
-        if (typeof config.options === 'object') {
+        if (typeof config.options === "object") {
             for (key in config.options) {
-                if (config.options.hasOwnProperty(key) && typeof (config.options[key]) === 'string') {
+                if (config.options.hasOwnProperty(key) && typeof (config.options[key]) === "string") {
                     url = url + "&" + key + "=" + encodeURIComponent(config.options[key]);
                 }
             }
         }
         this.url = url;
     }
+    /**
+     * Load API
+     *
+     * @returns Promise<void> that will be resolved on API ready
+     */
     Loader.prototype.load = function () {
         var _this = this;
         return new Promise(function (re, rj) {
             var elem = document.createElement("script");
             elem.type = "text/javascript";
             elem.src = _this.url;
-            elem.onload = function () { ymaps.ready(function () { re(); }); };
+            elem.onload = function () {
+                return ymaps.ready(function () {
+                    re();
+                });
+            };
             elem.onerror = function (e) { rj(e); };
             document.body.appendChild(elem);
         });

@@ -1,4 +1,3 @@
-/// <reference path="../src/type/ymaps.d.ts" />
 declare type IConfig = {
     type: string;
     version: string;
@@ -17,6 +16,11 @@ declare class Loader {
      * @param config API configuration
      */
     constructor(key: string, config?: IConfig);
+    /**
+     * Load API
+     *
+     * @returns Promise<void> that will be resolved on API ready
+     */
     load(): Promise<void>;
 }
 export { Loader };
