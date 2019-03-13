@@ -1,0 +1,23 @@
+{
+    "name": "uribuilder",
+    "version": "1.0.5",
+    "description": "URI builder and parser",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc"
+    },
+    "keywords": [
+        "Yandex map API"
+    ],
+    "homepage": "https://github.com/nonameffh/ymap",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nonameffh/ymap"
+    },
+    "author": "nonameFFh",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^3.0.0"
+    }
+}
