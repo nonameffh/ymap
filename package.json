@@ -1,7 +1,7 @@
 {
-    "name": "uribuilder",
-    "version": "1.0.5",
-    "description": "URI builder and parser",
+    "name": "@nonameffh/ymap",
+    "version": "1.0.0",
+    "description": "Yandex map API loader and parser",
     "main": "index.js",
     "scripts": {
         "build": "tsc"
